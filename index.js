@@ -24,7 +24,9 @@ async function run(){
             const services = await cursor.toArray();
             res.send(services);
         })
-
+        app.get('/hello', (req, res)=>{
+            res.send('hello updated here');
+        })
         //GET API for single service
         app.get('/services/:id',async(req,res)=>{
             const id = req.params.id;
